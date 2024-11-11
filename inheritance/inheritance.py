@@ -3,21 +3,29 @@ import random
 class Animal:
     info = "a living organism that feeds on organic matter."
 
-    def __init__(self):
+    def __init__(self,name):
         print("An animal is created.")
+        self.name = name
 
 class Dog(Animal):
     info = "a domesticated carnivorous animal."
+    
+
 
     def __init__(self, name):
 
-        super().__init__()
+        super().__init__(name)
         print("A dog is created.")
         self.lucky_number = random.randint(1,10)
-        self.name = name
+        self.fur = ""
 
     def bark(self):
         print(f"Woof! My name is {self.name} and my number is {self.lucky_number}")
 
-dog1 = Dog("Fido")
+class Bulldog(Dog):
+    def __init__(self, name):
+        super().__init__(name)
+        print("A bulldog is created.")
+
+dog1 = Bulldog("Fido")
 
