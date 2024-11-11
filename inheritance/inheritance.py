@@ -10,8 +10,6 @@ class Animal:
 class Dog(Animal):
     info = "a domesticated carnivorous animal."
     
-
-
     def __init__(self, name):
 
         super().__init__(name)
